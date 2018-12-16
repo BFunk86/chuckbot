@@ -53,5 +53,3 @@ const fact = async () => {
     }
     return fact;   
 }
-
-fact();
