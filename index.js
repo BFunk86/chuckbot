@@ -46,7 +46,7 @@ const fact = async () => {
     let fact;
     try {
         const response = (await chuckClient.get('/')).data;
-        fact = response.value.joke;
+        fact = (response.value.joke).replace(/&quot;/g,'"');
     } catch(error) {
         logger.log("Error retrieving facts. Chuck Norris has brought down the internet!")
         fact = "Error retrieving facts. Chuck Norris has brought down the internet!";
